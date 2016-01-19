@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBH-mq-ccD">
+                                <rect key="frame" x="20" y="570" width="280" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Bfm-b9-iqC"/>
+                                </constraints>
+                                <state key="normal" title="添加图片水印"/>
+                                <connections>
+                                    <action selector="addImageMark:" destination="BYZ-38-t0r" eventType="touchUpInside" id="04g-24-XVK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAN-AC-I65">
+                                <rect key="frame" x="300" y="570" width="280" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Yyz-Dr-w35"/>
+                                </constraints>
+                                <state key="normal" title="添加文字水印"/>
+                                <connections>
+                                    <action selector="addTextMark:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2uK-3K-PTz"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b3t-zq-2Zu">
+                                <rect key="frame" x="30" y="268" width="240" height="128"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="b3t-zq-2Zu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="4NK-Up-bMh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="b3t-zq-2Zu" secondAttribute="trailing" id="5yc-QW-3xN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hAN-AC-I65" secondAttribute="trailing" id="G7v-qP-BX8"/>
+                            <constraint firstItem="FBH-mq-ccD" firstAttribute="top" secondItem="b3t-zq-2Zu" secondAttribute="bottom" id="Jzq-r4-DtV"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hAN-AC-I65" secondAttribute="bottom" id="Nss-fa-57k"/>
+                            <constraint firstItem="b3t-zq-2Zu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Nyx-eb-Tk0"/>
+                            <constraint firstItem="hAN-AC-I65" firstAttribute="width" secondItem="FBH-mq-ccD" secondAttribute="width" id="XOw-lO-ESk"/>
+                            <constraint firstItem="hAN-AC-I65" firstAttribute="leading" secondItem="FBH-mq-ccD" secondAttribute="trailing" id="gFB-ng-cdm"/>
+                            <constraint firstItem="hAN-AC-I65" firstAttribute="leading" secondItem="FBH-mq-ccD" secondAttribute="trailing" id="q6g-iZ-zZl"/>
+                            <constraint firstItem="FBH-mq-ccD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="rHI-7P-Cs6"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FBH-mq-ccD" secondAttribute="bottom" id="tde-iw-hqp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageV" destination="b3t-zq-2Zu" id="cqC-vB-kGJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
